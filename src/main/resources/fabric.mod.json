@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "nodebuglag",
+	"version": "${version}",
+	"name": "No Debug Lag",
+	"description": "Stops the F3 debug screen from costing FPS. Shows a minimal overlay with coordinates, direction and FPS instead.",
+	"authors": ["Kiran"],
+	"contact": {},
+	"license": "CC0-1.0",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.kiran.nodebuglag.NoDebugLagClient"
+		],
+		"modmenu": [
+			"com.kiran.nodebuglag.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"nodebuglag.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}
